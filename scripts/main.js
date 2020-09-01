@@ -9,8 +9,8 @@ let lineColor = 'black';
 const canvas = document.getElementById('2dCanvas');
 const context = canvas.getContext('2d');
 
-//context.fillStyle = "#000000";
-//context.fillRect(0, 0, canvas.width, canvas.height);
+context.fillStyle = "#FFFFF0";
+context.fillRect(0, 0, canvas.width, canvas.height);
 
 
 canvas.addEventListener('mousedown', function(e) {
@@ -41,8 +41,8 @@ canvas.addEventListener('contextmenu', function(e) {
     e.preventDefault();
     //Clears the canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
-    //context.fillStyle = "#000000";
-    //context.fillRect(0, 0, canvas.width, canvas.height);
+    //context.fillStyle = "#FFFFF0";
+    context.fillRect(0, 0, canvas.width, canvas.height);
 });
 
 canvas.addEventListener('wheel', function(e) {
@@ -60,7 +60,7 @@ canvas.addEventListener('wheel', function(e) {
 
 window.addEventListener('keypress', function(e) {
     //Handles changing the line color
-    if (e.keyCode == 48) {
+    if (e.keyCode === 48) {
         lineColor = 'black';
     }
     else if (e.keyCode === 49) {
@@ -69,23 +69,68 @@ window.addEventListener('keypress', function(e) {
     else if (e.keyCode === 50) {
         lineColor = 'lime';
     }
-    else if (e.keyCode == 51) {
+    else if (e.keyCode === 51) {
         lineColor = 'cyan';
     }
-    else if (e.keyCode == 52) {
+    else if (e.keyCode === 52) {
         lineColor = 'red';
     }
-    else if (e.keyCode == 53) {
+    else if (e.keyCode === 53) {
         lineColor = 'magenta';
     }
-    else if (e.keyCode == 54) {
+    else if (e.keyCode === 54) {
         lineColor = 'yellow';
     }
-    else if (e.keyCode == 55) {
+    else if (e.keyCode === 55) {
         lineColor = 'white';
     }  
 
     //Handles changing the background color
+    //Black
+    else if (e.keyCode === 41) {
+        context.fillStyle = "#000000";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Blue
+    else if (e.keyCode === 33) {
+        context.fillStyle = "#0000FF";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Lime
+    else if (e.keyCode === 64) {
+        context.fillStyle = "#00FF00";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Cyan
+    else if (e.keyCode === 35) {
+        context.fillStyle = "#00FFFF";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Red
+    else if (e.keyCode === 36) {
+        context.fillStyle = "#FF0000";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Magenta
+    else if (e.keyCode === 37) {
+        context.fillStyle = "#FF00FF";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //Yellow
+    else if (e.keyCode === 94) {
+        context.fillStyle = "#FFFF00";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    //White
+    else if (e.keyCode === 38) {
+        context.fillStyle = "#FFFFF0";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    //Eraser
+    else if (e.keyCode === 101) {
+        lineColor = context.fillStyle;
+    }
 })
 
 function drawLine(context, x1, y1, x2, y2) {
