@@ -1,4 +1,4 @@
-# 2D Drawing Board
+# 2D Drawing Canvas
 
 Created with JavaScript, this interactive drawing board allows the user to draw using the mouse or trackpad.
 
