@@ -1,5 +1,7 @@
 # 2D Drawing Board
 
+Created with JavaScript, this interactive drawing board allows the user to draw using the mouse or trackpad.
+
 # Controls:
 Click and drag the left mouse button to draw. (Trackpads use one finger click and drag).
 
