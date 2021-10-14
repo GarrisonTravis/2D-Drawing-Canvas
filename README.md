@@ -22,5 +22,3 @@ Click the right mouse button to clear the whole board. (Trackpads use two finger
 
 
 Note: Resizing the browser window will clear the board.
-
-
